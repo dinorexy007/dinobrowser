@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Browser - Explore the Future</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div data-aos="fade-right">
+                <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">
+                    Unleash the <br>
+                    <span class="gradient-text">DINO Revolution</span>
+                </h1>
+                <p style="color: var(--text-secondary); font-size: 1.2rem; margin-bottom: 2rem; max-width: 500px;">
+                    Experience the next evolution of mobile browsing. Split-screen multitasking, offline Fossil Mode,
+                    and customizable workspaces.
+                </p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#features-grid" class="btn-primary"
+                        style="background: transparent; border: 1px solid var(--primary); color: var(--primary);">
+                        Explore Features <i class="fas fa-arrow-down" style="margin-left: 5px;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div data-aos="fade-left">
+                <!-- Mobile Mockup: Home -->
+                <div class="phone-mockup" id="hero-phone">
+                    <div class="phone-notch"></div>
+                    <div class="screen-content" style="justify-content: center; align-items: center;">
+                        <div class="dino-logo-mock">
+                            <img src="assets/dino_logo.png" alt="Dino Browser" class="dino-logo-img">
+                        </div>
+                        <h2 class="gradient-text" style="font-size: 1.8rem; margin-bottom: 5px;">Dino Browser</h2>
+                        <p style="color: #888; font-size: 0.9rem; margin-bottom: 40px; text-align: center;">The future
+                            of browsing is here.</p>
+
+                        <div class="search-bar-mock" style="width: 100%;"></div>
+                        <div class="icon-grid" style="width: 100%;">
+                            <div class="app-icon-mock"></div>
+                            <div class="app-icon-mock"></div>
+                            <div class="app-icon-mock"></div>
+                            <div class="app-icon-mock"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Split Screen Feature -->
+    <section id="split-screen" style="background: rgba(0,0,0,0.2);">
+        <div class="container">
+            <div data-aos="fade-right" style="order: 2;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">T-Rex <span class="gradient-text">Split
+                        Vision</span></h2>
+                <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2rem;">
+                    Watch a video and shop at same time. Drag, drop, and multitask like a predator with our seamless
+                    split-screen view.
+                </p>
+            </div>
+
+            <div data-aos="fade-up" style="order: 1;">
+                <!-- Mobile Mockup: Split Screen -->
+                <div class="phone-mockup">
+                    <div class="phone-notch"></div>
+                    <div class="screen-content">
+                        <div class="split-screen-container">
+                            <div class="split-top">
+                                <small style="color: #666;">YouTube</small>
+                                <div
+                                    style="width: 100%; height: 100px; background: #FF0000; border-radius: 8px; margin-top: 10px; opacity: 0.8; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-play" style="color: white; font-size: 20px;"></i>
+                                </div>
+                            </div>
+                            <div class="split-divider"></div>
+                            <div class="split-bottom">
+                                <small style="color: #666;">Amazon</small>
+                                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                                    <div style="width: 40px; height: 40px; background: #eee; border-radius: 5px;"></div>
+                                    <div style="flex: 1;">
+                                        <div style="width: 80%; height: 8px; background: #444; border-radius: 4px;">
+                                        </div>
+                                        <div
+                                            style="width: 40%; height: 8px; background: #ffaace; margin-top: 5px; border-radius: 4px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workspaces Feature -->
+    <section id="workspaces">
+        <div class="container">
+            <div data-aos="fade-right">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Organized <span
+                        class="gradient-text">Workspaces</span></h2>
+                <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2rem;">
+                    Keep your hunting grounds organized. Switch context instantly without losing your tabs.
+                </p>
+            </div>
+
+            <div data-aos="fade-left">
+                <!-- Mobile Mockup: Workspaces -->
+                <div class="phone-mockup">
+                    <div class="phone-notch"></div>
+                    <div class="screen-content">
+                        <h3 style="margin-bottom: 20px;">My Spaces</h3>
+                        <div class="workspace-card">
+                            <h4 style="color: var(--primary);">Coding</h4>
+                            <small>StackOverflow, GitHub</small>
+                        </div>
+                        <div class="workspace-card">
+                            <h4 style="color: #FF4081;">Entertainment</h4>
+                            <small>Netflix, YouTube</small>
+                        </div>
+                        <div class="workspace-card">
+                            <h4 style="color: #448AFF;">Study</h4>
+                            <small>Wiki, Canvas</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extensions Feature (New Section) -->
+    <section id="extensions" style="background: rgba(0,0,0,0.2);">
+        <div class="container">
+            <div data-aos="fade-right" style="order: 2;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Powerful <span
+                        class="gradient-text">Extensions</span></h2>
+                <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2rem;">
+                    Customize your experience with essential tools. Block ads, turn the web dark, or boost productivity.
+                </p>
+                <div class="feature-card">
+                    <i class="fas fa-puzzle-piece"
+                        style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                    <p style="color: #ccc;">Lightweight, efficient, and built for speed.</p>
+                </div>
+            </div>
+
+            <div data-aos="fade-left" style="order: 1;">
+                <!-- Mobile Mockup: Extensions -->
+                <div class="phone-mockup">
+                    <div class="phone-notch"></div>
+                    <div class="screen-content">
+                        <h3 style="margin-bottom: 20px;">Store</h3>
+
+                        <div class="extension-item">
+                            <div class="extension-info">
+                                <div class="extension-icon">🛑</div>
+                                <div>
+                                    <div style="font-weight: 600; font-size: 0.9rem;">AdBlock Plus</div>
+                                    <div style="font-size: 0.7rem; color: #888;">Privacy</div>
+                                </div>
+                            </div>
+                            <div class="toggle-switch active">
+                                <div class="toggle-knob"></div>
+                            </div>
+                        </div>
+
+                        <div class="extension-item">
+                            <div class="extension-info">
+                                <div class="extension-icon">🌙</div>
+                                <div>
+                                    <div style="font-weight: 600; font-size: 0.9rem;">Dark Reader</div>
+                                    <div style="font-size: 0.7rem; color: #888;">Appearance</div>
+                                </div>
+                            </div>
+                            <div class="toggle-switch active">
+                                <div class="toggle-knob"></div>
+                            </div>
+                        </div>
+
+                        <div class="extension-item">
+                            <div class="extension-info">
+                                <div class="extension-icon">⚡</div>
+                                <div>
+                                    <div style="font-weight: 600; font-size: 0.9rem;">Speed Reader</div>
+                                    <div style="font-size: 0.7rem; color: #888;">Productivity</div>
+                                </div>
+                            </div>
+                            <div class="toggle-switch">
+                                <div class="toggle-knob"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fossil Mode (Dual Animation) -->
+    <section id="fossil-mode">
+        <div class="container">
+            <div data-aos="fade-up" style="text-align: center; width: 100%;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Offline <span class="gradient-text">Fossil
+                        Mode</span></h2>
+
+                <div class="fossil-dual-container">
+                    <!-- Phone 1: Online & Clicking -->
+                    <div class="phone-mockup" style="transform: scale(0.9); margin: 0;">
+                        <div class="phone-notch"></div>
+                        <div class="screen-content" style="background: #1a1a1a;">
+
+                            <div style="margin-top: 20px; display: flex; justify-content: space-between;">
+                                <i class="fas fa-wifi" style="color: var(--primary);"></i>
+                                <i class="fas fa-battery-full" style="color: #eee;"></i>
+                            </div>
+
+                            <!-- Dummy Content -->
+                            <div style="margin-top: 30px; text-align: left;">
+                                <div
+                                    style="width: 60%; height: 10px; background: #555; border-radius: 5px; margin-bottom: 10px;">
+                                </div>
+                                <div
+                                    style="width: 90%; height: 8px; background: #333; border-radius: 4px; margin-bottom: 5px;">
+                                </div>
+                                <div
+                                    style="width: 85%; height: 8px; background: #333; border-radius: 4px; margin-bottom: 5px;">
+                                </div>
+                                <div style="width: 40%; height: 8px; background: #333; border-radius: 4px;"></div>
+                            </div>
+
+                            <div style="margin-top: auto; padding-bottom: 30px;">
+                                <div class="fossil-btn-mock" style="animation: btn-press 4s infinite;">
+                                    <i class="fas fa-bone" style="font-size: 24px; color: var(--primary);"></i>
+                                </div>
+                                <small style="color: #666; margin-top: 10px; display: block;">Save to Fossil</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div class="arrow-divider">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+
+                    <!-- Phone 2: Offline Result -->
+                    <div class="phone-mockup" style="transform: scale(0.9); margin: 0;">
+                        <div class="phone-notch"></div>
+                        <div class="screen-content" style="background: #1a1a1a;">
+                            <div class="offline-badge">Offline Ready</div>
+
+                            <div style="margin-top: 20px; display: flex; justify-content: space-between;">
+                                <span class="fa-stack" style="font-size: 10px;">
+                                    <i class="fas fa-wifi fa-stack-2x" style="color: #444;"></i>
+                                    <i class="fas fa-slash fa-stack-2x" style="color: #666;"></i>
+                                </span>
+                                <i class="fas fa-battery-full" style="color: #eee;"></i>
+                            </div>
+
+                            <!-- Content Persists -->
+                            <div style="margin-top: 30px; text-align: left;">
+                                <div
+                                    style="width: 60%; height: 10px; background: #555; border-radius: 5px; margin-bottom: 10px;">
+                                </div>
+                                <div
+                                    style="width: 90%; height: 8px; background: #333; border-radius: 4px; margin-bottom: 5px;">
+                                </div>
+                                <div
+                                    style="width: 85%; height: 8px; background: #333; border-radius: 4px; margin-bottom: 5px;">
+                                </div>
+                                <div style="width: 40%; height: 8px; background: #333; border-radius: 4px;"></div>
+                            </div>
+
+                            <div style="margin-top: auto; padding-bottom: 40px; text-align: center;">
+                                <i class="fas fa-check-circle" style="color: var(--primary); font-size: 40px;"></i>
+                                <p style="margin-top: 10px; font-size: 0.8rem; color: #fff;">Saved!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p style="color: var(--text-secondary); margin-top: 2rem;">Save the entire web for later. No internet?
+                    No problem.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section (Final) -->
+    <section id="download"
+        style="text-align: center; padding-bottom: 8rem; background: radial-gradient(circle at center, rgba(0,230,118,0.1) 0%, transparent 60%);">
+        <div class="container" style="display: block;">
+            <div data-aos="zoom-in">
+                <h2 style="font-size: 3rem; margin-bottom: 2rem;">Ready to Evolve?</h2>
+                <div style="width: 120px; height: 120px; margin: 0 auto 2rem;">
+                    <img src="assets/dino_logo.png"
+                        style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 0 20px var(--primary));">
+                </div>
+
+                <a href="../build/app/outputs/flutter-apk/app-release.apk" class="btn-primary"
+                    style="padding: 1.5rem 3rem; font-size: 1.2rem;" download>
+                    <i class="fab fa-android" style="margin-right: 10px;"></i> Download for Android
+                </a>
+                <p style="margin-top: 1rem; color: var(--text-secondary);">Version 1.0.0 • Free • Secure</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 2rem; border-top: 1px solid #333; color: #666;">
+        <p>&copy; 2026 Dino Browser Project. Built with Flutter.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+
+</html>

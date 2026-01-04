@@ -1,0 +1,465 @@
+:root {
+    --primary: #00E676;
+    --primary-dim: rgba(0, 230, 118, 0.1);
+    --secondary: #1A1A1A;
+    --bg-dark: #121212;
+    --text-primary: #FFFFFF;
+    --text-secondary: #B0B0B0;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(0, 230, 118, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(0, 230, 118, 0.05) 0%, transparent 20%);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+/* ... existing animations ... */
+
+/* Pulse animation for the button when clicked */
+/* synced to 4s: click happens around 50% (2s) */
+@keyframes btn-press {
+
+    0%,
+    45% {
+        transform: scale(1);
+        background: #333;
+    }
+
+    50% {
+        transform: scale(0.9);
+        background: var(--primary);
+    }
+
+    55%,
+    100% {
+        transform: scale(1);
+        background: #333;
+    }
+}
+
+.offline-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--primary);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    opacity: 0;
+    animation: badge-appear 4s infinite;
+}
+
+/* Badge appears AFTER the click (which is at 50% / 2s) */
+@keyframes badge-appear {
+
+    0%,
+    55% {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+
+    60%,
+    90% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+}
+
+/* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 20px rgba(0, 230, 118, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(0, 230, 118, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 20px rgba(0, 230, 118, 0.2);
+    }
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #FFFFFF 0%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Sections */
+section {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* Mockup Frame */
+.phone-mockup {
+    width: 300px;
+    height: 600px;
+    background: #000;
+    border-radius: 40px;
+    border: 8px solid #333;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin: 0 auto;
+    animation: float 6s ease-in-out infinite;
+}
+
+.phone-notch {
+    width: 150px;
+    height: 25px;
+    background: #333;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 10;
+}
+
+/* Mockup Screens (UI Recreated in CSS) */
+.screen-content {
+    width: 100%;
+    height: 100%;
+    background: var(--bg-dark);
+    padding: 40px 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mockup: Hero Screen */
+.dino-logo-mock {
+    width: 120px;
+    height: 120px;
+    background: transparent;
+    margin: 60px auto 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Round logo per user request */
+    border-radius: 50%;
+    overflow: hidden;
+    /* Soft glow */
+    filter: drop-shadow(0 0 15px var(--primary-dim));
+    box-shadow: none;
+}
+
+.dino-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.search-bar-mock {
+    height: 50px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 25px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Fossil Animation Styles */
+.fossil-dual-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: nowrap;
+    /* Force side-by-side */
+    transform-origin: center top;
+}
+
+/* Responsive scaling for mobile to keep them side-by-side */
+@media (max-width: 768px) {
+    .fossil-dual-container {
+        transform: scale(0.6);
+        margin-bottom: -150px;
+        /* Counteract empty space from scaling */
+    }
+}
+
+@media (max-width: 480px) {
+    .fossil-dual-container {
+        transform: scale(0.45);
+        margin-bottom: -250px;
+    }
+}
+
+.fossil-btn-mock {
+    width: 60px;
+    height: 60px;
+    background: #333;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+/* Pulse animation for the button when clicked */
+@keyframes btn-press {
+
+    0%,
+    45% {
+        transform: scale(1);
+        background: #333;
+    }
+
+    50% {
+        transform: scale(0.9);
+        background: var(--primary);
+    }
+
+    55%,
+    100% {
+        transform: scale(1);
+        background: #333;
+    }
+}
+
+.offline-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--primary);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    opacity: 0;
+    animation: badge-appear 4s infinite;
+}
+
+@keyframes badge-appear {
+
+    0%,
+    55% {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+
+    60%,
+    90% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+}
+
+.arrow-divider {
+    font-size: 3rem;
+    color: var(--primary);
+    animation: pulse-glow 2s infinite;
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.app-icon-mock {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+}
+
+/* Mockup: Extensions List */
+.extension-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.extension-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.extension-icon {
+    width: 30px;
+    height: 30px;
+    background: #333;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.toggle-switch {
+    width: 40px;
+    height: 22px;
+    background: #444;
+    border-radius: 11px;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.toggle-switch.active {
+    background: var(--primary);
+}
+
+.toggle-knob {
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: left 0.3s;
+}
+
+.toggle-switch.active .toggle-knob {
+    left: 20px;
+}
+
+/* Mockup: Split Screen */
+.split-screen-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.split-top,
+.split-bottom {
+    flex: 1;
+    background: #2A2A2A;
+    border-radius: 15px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.split-divider {
+    height: 4px;
+    background: var(--primary);
+    width: 50%;
+    margin: 5px auto;
+    border-radius: 2px;
+}
+
+/* Mockup: Workspaces */
+.workspace-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.workspace-card:hover {
+    transform: scale(1.02);
+    border-color: var(--primary);
+}
+
+/* UI Elements */
+.btn-primary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--primary);
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 30px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 230, 118, 0.4);
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    padding: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    height: 100%;
+}
