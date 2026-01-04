@@ -1,0 +1,96 @@
+name: browser
+description: "Dino Browser - A Next-Gen Mobile Browser with Prehistoric Theme"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Core UI
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.1.0
+  
+  # Animations - 2025 Modern UI
+  animate_do: ^3.1.0
+  
+  # WebView Engine - Critical for JS injection
+  flutter_inappwebview: ^6.0.0
+  
+  # State Management
+  provider: ^6.1.1
+  
+  # Local Database
+  sqflite: ^2.3.0
+  path_provider: ^2.1.1
+  path: ^1.8.3
+  
+  # Session persistence
+  shared_preferences: ^2.2.2
+  
+  # Firebase (using compatible versions)
+  firebase_core: ^3.6.0
+  firebase_auth: ^5.3.1
+  cloud_firestore: ^5.4.0
+  google_sign_in: ^6.2.1
+  
+  # Networking
+  http: ^1.2.0
+  
+  # Image handling
+  cached_network_image: ^3.3.0
+  
+  # Markdown rendering for AI responses
+  flutter_markdown: ^0.7.6
+  
+  # Screenshot for Time-Travel History
+  screenshot: ^3.0.0
+  
+  # Share functionality
+  share_plus: ^10.0.0
+  
+  # Image picker for AI image upload
+  image_picker: ^1.0.7
+  
+  # URL launcher
+  url_launcher: ^6.2.1
+  
+  # UUID for unique identifiers
+  uuid: ^4.2.1
+  
+  # Archive/ZIP extraction for Chrome extensions
+  archive: ^4.0.0
+  
+  # File picker for Chrome extension installation
+  file_picker: ^8.0.0
+  
+  # Download manager dependencies
+  permission_handler: ^11.0.1
+  open_file: ^3.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+
+# App icon configuration
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/dino_logo.png"
+  adaptive_icon_background: "#0D1117"
+  adaptive_icon_foreground: "assets/icon/dino_logo.png"
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/icons/
+    - assets/images/
+    - assets/icon/
+    - assets/js/
+
